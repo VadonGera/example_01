@@ -3,7 +3,7 @@ class Animal:
         self.name = name
 
     def speek(self):
-        print("Животное говорит")
+        return "говорит"
 
 
 class Dog(Animal):
@@ -12,8 +12,7 @@ class Dog(Animal):
         self.breed = breed
 
     def speek(self):
-        super().speek()
-        print("Собака лает")
+        print(f"{self.breed} {self.name} {super().speek()} Мяу")
 
 
 my_dog = Dog("Мася", "Белый кот")
